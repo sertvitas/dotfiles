@@ -2,6 +2,9 @@ I borrowed the idea to manage my configuration with make from https://github.com
 
 The makefile is self-documenting, but this project does  assume some thing about the configuration.
 
+
+grep, sed, curl, shellcheck
+
 ### gpg is configured
  - gpg is installed
  - I use the seahorse and seahorse-nautilus packages to make it easy to work with my keys

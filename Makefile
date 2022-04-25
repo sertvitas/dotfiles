@@ -6,9 +6,10 @@ COMMIT := $(shell git rev-parse HEAD)
 BIN = $(HOME)/bin
 BASHRCD = $(HOME)/bashrc.d
 COMMONRCD = $(HOME)/commonrc.d
-# OS either 'Darwin' or 'Linux'
+# OS = 'Darwin' or 'Linux'
 OS = $(shell uname -s)
-
+# get epoch seconds at the start of the make run
+EPOCH = $(shell date +%s)
 MKDIR = mkdir -p
 LN = ln -vs
 LNF = ln -vsf
@@ -25,6 +26,29 @@ home: ## configure home directory
 
 bash: ## configure bash environment
 	$(MKDIR) $(HOME)/bashrc.d
+	# some desc
+	$(LN) $(PRJ)/bashrc.d/add_home_bin_to_path.sh  $(BASHRCD)/add_home_bin_to_path.sh
+	$(LN) $(PRJ)/bashrc.d/aliases.sh  $(BASHRCD)/aliases.sh
+	$(LN) $(PRJ)/bashrc.d/aws_functions.sh $(BASHRCD)/aws_functions.sh
+	$(LN) $(PRJ)/bashrc.d/bash_functions.sh $(BASHRCD)/bash_functions.sh
+	$(LN) $(PRJ)/bashrc.d/bash_powerline.sh $(BASHRCD)/bash_powerline.sh
+	$(LN) $(PRJ)/bashrc.d/editor.sh  $(BASHRCD)/editor.sh
+	$(LN) $(PRJ)/bashrc.d/fzf.sh  $(BASHRCD)/fzf.sh
+	$(LN) $(PRJ)/bashrc.d/git_aliases.sh $(BASHRCD)/git_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/git_functions.sh $(BASHRCD)/git_functions.sh
+	$(LN) $(PRJ)/bashrc.d/go.sh $(BASHRCD)/go.sh
+	$(LN) $(PRJ)/bashrc.d/ohmyzsh_git_aliases.sh  $(BASHRCD)/ohmyzsh_git_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/packer.sh $(BASHRCD)/packer.sh
+	$(LN) $(PRJ)/bashrc.d/ssh_aliases.sh $(BASHRCD)/ssh_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/temp_aliases.sh  $(BASHRCD)/temp_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/tmux_aliases.sh $(BASHRCD)/tmux_aliases.sh
+	sed -i.$(EPOCH) '/\.bashrc\.local/d' $(HOME)/.bashrc
+	echo '. $(HOME)/.bashrc.local' >> $(HOME)/.bashrc
+	$(LN) $(PRJ)/bashrc.local $(HOME)/.bashrc.local
+
+bash-destroy:
+	rm -rf $(BASHRCD)
+	rm -f $(HOME)/.bashrc.local
 
 gpg: home ## download gpg scripts
 	curl --silent -o $(BIN)/encrypt https://raw.githubusercontent.com/natemarks/pipeline-scripts/main/scripts/encrypt
@@ -35,7 +59,11 @@ gpg: home ## download gpg scripts
 stayback: ## configure stayback
 	$(MKDIR) $(HOME)/.stayback
 	$(HOME)/bin/decrypt $(PWD)/stayback.json.gpg
-	$(LN) $($PWD)/stayback.json  $(HOME)/.stayback.json
+	$(LN) $(PRJ)/stayback.json  $(HOME)/.stayback.json
 
 vim: ## configure vim
-	$(LN) $($PWD)/vim/vimrc  $(HOME)/.vimrc
+	$(LN) $(PRJ)/vim/vimrc  $(HOME)/.vimrc
+
+
+shellcheck: ## shellcheck project files
+	find . -type f -name "*.sh" -exec "shellcheck" "--format=gcc" {} \;
