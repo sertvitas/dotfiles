@@ -23,6 +23,8 @@ home: ## configure home directory
 	$(MKDIR) $(HOME)/bin
 	# manage temporary/scratch files in $HOME/tmp
 	$(MKDIR) $(HOME)/tmp
+	# manage project files in $HOME/projects
+	$(MKDIR) $(HOME)/projects
 
 bash: ## configure bash environment
 	$(MKDIR) $(HOME)/bashrc.d

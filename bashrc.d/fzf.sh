@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Auto-completion
 # ---------------
 [[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/completion.bash" 2> /dev/null

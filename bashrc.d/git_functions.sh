@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # shellcheck disable=SC2148
 # gwbdiff -  git working - branch diff
 # compare file in git working directory to the same file in another branch

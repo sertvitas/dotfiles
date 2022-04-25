@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # I use temp dirs all the time
 alias cd_temp='cd $(mktemp -d -t deleteme.XXXXXX)'
 alias mk_temp='$(mktemp -d -t deleteme.XXXXXX)'

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Some tmux-related shell aliases
 
 # Attaches tmux to the last session; creates a new session if none exists.
