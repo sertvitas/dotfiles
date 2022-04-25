@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/usr/share/doc/fzf/examples/completion.bash" 2> /dev/null
+# shellcheck disable=SC1091
+[[ $- == *i* ]] && . "/usr/share/doc/fzf/examples/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/usr/share/doc/fzf/examples/key-bindings.bash"
+# shellcheck disable=SC1091
+. "/usr/share/doc/fzf/examples/key-bindings.bash"
