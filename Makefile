@@ -43,6 +43,7 @@ bash: ## configure bash environment
 	$(LN) $(PRJ)/bashrc.d/packer.sh $(BASHRCD)/packer.sh
 	$(LN) $(PRJ)/bashrc.d/ssh_aliases.sh $(BASHRCD)/ssh_aliases.sh
 	$(LN) $(PRJ)/bashrc.d/temp_aliases.sh  $(BASHRCD)/temp_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/terragrunt_aliases.sh  $(BASHRCD)/terragrunt_aliases.sh
 	$(LN) $(PRJ)/bashrc.d/tmux_aliases.sh $(BASHRCD)/tmux_aliases.sh
 	sed -i.$(EPOCH) '/\.bashrc\.local/d' $(HOME)/.bashrc
 	echo '. $(HOME)/.bashrc.local' >> $(HOME)/.bashrc
