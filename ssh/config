@@ -1,0 +1,11 @@
+Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/emoon-imprivata
+  IdentitiesOnly yes
+
+
+
+Host github-personal
+  HostName github.com
+  IdentityFile ~/.ssh/sertvitas
+  IdentitiesOnly yes

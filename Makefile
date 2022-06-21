@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 DEFAULT_BRANCH := main
-PRJ:= $(PWD)
+PRJ := $(PWD)
 COMMIT := $(shell git rev-parse HEAD)
 BIN = $(HOME)/bin
 BASHRCD = $(HOME)/bashrc.d
@@ -94,3 +94,9 @@ packages: ## install required packages
     hunspell; \
     mkdir -p ~/.config/Code; \
     sudo ln -sf /usr/share/hunspell ~/.config/Code/Dictionaries
+
+ssh-config: ## ssh config
+	-rm -f $(HOME)/.ssh/config
+	$(LN) $(PRJ)/ssh/config  $(HOME)/.ssh/config
+
+
