@@ -68,8 +68,8 @@ vim: ## configure vim
 	$(LN) $(PRJ)/vim/vimrc  $(HOME)/.vimrc
 
 
-shellcheck: ## shellcheck project files
-	find . -type f -name "*.sh" -exec "shellcheck" "--format=gcc" {} \;
+shellcheck: ## shellcheck project files. skip ohmyzsh_git_aliases.sh file
+	find . -type f -name "*.sh" ! -name 'ohmyzsh_git_aliases.sh' -exec "shellcheck" "--format=gcc" {} \;
 
 packages: ## install required packages
     # dconf/uuid for gogh colors
