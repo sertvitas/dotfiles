@@ -12,4 +12,4 @@ POWERLINE_BASH_SELECT=1
 #     /home/nate/.local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 # shellcheck disable=SC1090
-. "$(find "$(python -m site --user-site)" -type f -name powerline.sh | grep bash/powerline.sh)"
+. "$(find "$(python3 -m site --user-site)" -type f -name powerline.sh | grep bash/powerline.sh)"
