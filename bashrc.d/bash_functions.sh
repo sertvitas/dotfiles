@@ -45,3 +45,7 @@ pathinsert() {
 pathappemd() {
   export PATH=$PATH:"${1}"
 }
+
+function get_projects {
+    echo ~/projects
+    }
