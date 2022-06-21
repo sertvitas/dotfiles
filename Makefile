@@ -69,3 +69,27 @@ vim: ## configure vim
 
 shellcheck: ## shellcheck project files
 	find . -type f -name "*.sh" -exec "shellcheck" "--format=gcc" {} \;
+
+packages: ## install required packages
+    # dconf/uuid for gogh colors
+	sudo apt-get install -y \
+	curl \
+	git \
+    tree \
+    make \
+    wget \
+    zip \
+    unzip \
+    seahorse-nautilus \
+    fzf \
+    ripgrep \
+    silversearcher-ag \
+    jq \
+    fonts-powerline \
+    dconf-cli \
+    uuid-runtime \
+    tmux \
+    shellcheck \
+    hunspell; \
+    mkdir -p ~/.config/Code; \
+    sudo ln -sf /usr/share/hunspell ~/.config/Code/Dictionaries

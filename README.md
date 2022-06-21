@@ -1,4 +1,4 @@
-I borrowed the idea to manage my configuration with make from https://github.com/masasam/dotfiles. 
+ls opt/idea/bin/idea.shI borrowed the idea to manage my configuration with make from https://github.com/masasam/dotfiles. 
 
 The makefile is self-documenting, but this project does  assume some thing about the configuration.
 
