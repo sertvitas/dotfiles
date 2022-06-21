@@ -1,2 +1,5 @@
-#!/usr/bin/env bash
-export EDITOR=nvim
+if which vim; then
+  export EDITOR=vim
+  else
+  export EDITOR=vi
+fi
