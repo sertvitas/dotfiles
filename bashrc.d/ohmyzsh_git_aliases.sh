@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC1000-SC2500
+# shellcheck disable=all
 # These were taken from the amazing ohmyzsh zsh plugin. I can't live without
 # them in bash
 
