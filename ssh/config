@@ -9,3 +9,9 @@ Host github-personal
   HostName github.com
   IdentityFile ~/.ssh/sertvitas
   IdentitiesOnly yes
+
+
+Host ssh.dev.azure.com
+  IdentityFile ~/.ssh/emoon-imprivata
+  IdentitiesOnly yes
+
