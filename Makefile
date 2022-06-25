@@ -5,7 +5,7 @@ PRJ := $(PWD)
 COMMIT := $(shell git rev-parse HEAD)
 BIN = $(HOME)/bin
 BASHRCD = $(HOME)/bashrc.d
-COMMONRCD = $(HOME)/commonrc.d
+POWERLINE = $(HOME)/.config/powerline
 # OS = 'Darwin' or 'Linux'
 OS = $(shell uname -s)
 # get epoch seconds at the start of the make run
@@ -26,8 +26,16 @@ home: ## configure home directory
 	# manage project files in $HOME/projects
 	$(MKDIR) $(HOME)/projects
 
+powerline: ## install and configure powerline
+	pip3 install --user powerline-status
+	pip3 install --user powerline-gitstatus
+	$(MKDIR) $(POWERLINE)/colorschemes
+	$(MKDIR) $(POWERLINE)/themes/shell
+	$(LN) $(PRJ)/powerline/colorschemes_default.json  $(POWERLINE)/colorschemes/default.json
+	$(LN) $(PRJ)/powerline/themes_shell_default.json  $(POWERLINE)/themes/shell/default.json
+
 bash: ## configure bash environment
-	$(MKDIR) $(HOME)/bashrc.d
+	$(MKDIR) $(BASHRCD)
 	# some desc
 	$(LN) $(PRJ)/bashrc.d/add_home_bin_to_path.sh  $(BASHRCD)/add_home_bin_to_path.sh
 	$(LN) $(PRJ)/bashrc.d/aliases.sh  $(BASHRCD)/aliases.sh
