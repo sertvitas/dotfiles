@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-
+.PHONY: gitconfig vim
 DEFAULT_BRANCH := main
 PRJ := $(PWD)
 COMMIT := $(shell git rev-parse HEAD)
