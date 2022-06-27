@@ -49,6 +49,9 @@ bash: ## configure bash environment
 	echo '. $(HOME)/.bashrc.local' >> $(HOME)/.bashrc
 	$(LN) $(PRJ)/bashrc.local $(HOME)/.bashrc.local
 
+gitconfig: ## deploy user gitconfig
+	$(LN) $(PRJ)/gitconfig $(HOME)/.gitconfig
+
 bash-destroy:
 	rm -rf $(BASHRCD)
 	rm -f $(HOME)/.bashrc.local
