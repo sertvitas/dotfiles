@@ -60,10 +60,6 @@ bash: ## configure bash environment
 gitconfig: ## deploy user gitconfig
 	$(LN) $(PRJ)/gitconfig $(HOME)/.gitconfig
 
-bash-destroy:
-	rm -rf $(BASHRCD)
-	rm -f $(HOME)/.bashrc.local
-
 gpg: home ## download gpg scripts
 	curl --silent -o $(BIN)/encrypt https://raw.githubusercontent.com/natemarks/pipeline-scripts/main/scripts/encrypt
 	curl --silent -o $(BIN)/decrypt https://raw.githubusercontent.com/natemarks/pipeline-scripts/main/scripts/decrypt
@@ -77,7 +73,6 @@ stayback: ## configure stayback
 
 vim: ## configure vim
 	$(LN) $(PRJ)/vim/vimrc  $(HOME)/.vimrc
-
 
 shellcheck: ## shellcheck project files. skip ohmyzsh_git_aliases.sh file
 	find . -type f -name "*.sh" ! -name 'ohmyzsh_git_aliases.sh' -exec "shellcheck" "--format=gcc" {} \;
@@ -102,12 +97,29 @@ packages: ## install required packages
     uuid-runtime \
     tmux \
     shellcheck \
-    hunspell; \
-    mkdir -p ~/.config/Code; \
-    sudo ln -sf /usr/share/hunspell ~/.config/Code/Dictionaries
+    hunspell;
 
 ssh-config: ## ssh config
-	-rm -f $(HOME)/.ssh/config
 	$(LN) $(PRJ)/ssh/config  $(HOME)/.ssh/config
 
+rm-bash: ## remove bashrc config before replacing
+	-rm -rf $(BASHRCD)
+	-rm -f $(HOME)/.bashrc.local
 
+rm-gpg: ## cleanup gpg scripts before replacing
+	-rm -f $(BIN)/encrypt
+	-rm -f $(BIN)/decrypt
+
+rm-powerline: ## remove the powerline files before replacing
+	-rm -f $(POWERLINE)/colorschemes/default.json
+	-rm -f $(POWERLINE)/themes/shell/default.json
+
+rm-ssh-config: ## remove gitconfig before replacing
+	-rm -f $(HOME)/.ssh/config
+
+rm-gitconfig: ## remove gitconfig before replacing
+	-rm -f $(HOME)/.gitconfig
+
+remove-all: rm-bash rm-gpg rm-powerline rm-ssh-config rm-gitconfig ## destroy everything you love
+
+all: packages gpg powerline bash gitconfig ssh-config ## configure everything
