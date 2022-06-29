@@ -10,7 +10,7 @@ alias do_prune_everything='docker system prune -a'
 alias cdh='cd $(find ~ -maxdepth 1 -type d | fzf)'
 alias cdp='cd $(find ~/projects ~/go/src/github.com -maxdepth 2 -type d | fzf)'
 alias vim='nvim'
-alias aws_imprivata-sandbox='eval "$(gpg --decrypt --recipient npmarks@gmail.com ~/bin/aws_imprivata-sandbox.sh.gpg)"'
+#alias aws_imprivata-sandbox='eval "$(gpg --decrypt --recipient npmarks@gmail.com ~/bin/aws_imprivata-sandbox.sh.gpg)"'
 alias aws_i-platform-dev='eval "$(gpg --decrypt --recipient npmarks@gmail.com ~/bin/aws_i-platform-dev.sh.gpg)"'
 alias aws_cortext-ng='eval "$(gpg --decrypt --recipient npmarks@gmail.com ~/bin/aws_cortext-ng.sh.gpg)"'
 alias aws_imprivata-natemarks='eval "$(gpg --decrypt --recipient npmarks@gmail.com ~/bin/aws_imprivata-natemarks.sh.gpg)"'
@@ -18,3 +18,6 @@ alias aws_imprivata-natemarks='eval "$(gpg --decrypt --recipient npmarks@gmail.c
 alias vcc='code -n .'
 # open project in vscode using fzf
 alias vcp='code -n $(find ~/projects -maxdepth 1 -type d | fzf)'
+# aws account aliases
+alias aws_imprivata-sandbox='export AWS_PROFILE=imprivata-sandbox'
+alias aws_whoami='aws sts get-caller-identity'
