@@ -110,7 +110,21 @@ packages: ## install required packages
     uuid-runtime \
     tmux \
     shellcheck \
-    hunspell;
+    hunspell \
+		build-essential \
+		libssl-dev \
+		zlib1g-dev \
+		libbz2-dev \
+		libreadline-dev \
+		libsqlite3-dev \
+		llvm \
+		libncursesw5-dev \
+		xz-utils \
+		tk-dev \
+		libxml2-dev \
+		libxmlsec1-dev \
+		libffi-dev \
+		liblzma-dev;
 
 ssh-config: ## ssh config
 	$(LN) $(PRJ)/ssh/config  $(HOME)/.ssh/config

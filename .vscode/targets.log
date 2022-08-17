@@ -1,0 +1,494 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Thu Aug 11 13:17:09 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+PIPENV_PYTHON = /Users/nmarks/.pyenv/shims/python
+# makefile (from `Makefile', line 3)
+DEFAULT_BRANCH := main
+# automatic
+?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/nmarks/Projects/erik/dotfiles
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 6)
+BIN = $(HOME)/bin
+# environment
+FZF_DEFAULT_COMMAND = rg --files --hidden --glob "!.git/*"
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# environment
+UPLOAD_MARKDOWN_FEED = https://upload-markdown:7wjtkqu4eyusr2ammh7iv4dkkgxghwrhstjbbysnejtgipra2zuq@imprivata.pkgs.visualstudio.com/_packaging/upload-markdown/pypi/simple/
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+GO111MODULE = on
+# environment
+AUTOJUMP_SOURCED = 1
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+P9K_SSH = 0
+# environment
+VSCODE_CWD = /Users/nmarks/Projects/erik/dotfiles
+# environment
+PATH = /Users/nmarks/.pyenv/shims:/Users/nmarks/.pyenv/bin:/Users/nmarks/.pyenv/shims:/Users/nmarks/.pyenv/bin:/Users/nmarks/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/Users/nmarks/go/bin:/Users/nmarks/bin:/Users/nmarks/.local/bin:/usr/local/opt/fzf/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+GOPATH = /Users/nmarks/go
+# makefile (from `Makefile', line 12)
+EPOCH = $(shell date +%s)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+PYENV_ROOT = /Users/nmarks/.pyenv
+# makefile (from `Makefile', line 5)
+COMMIT := dc18e7dab25bea8e159ed22fd69e5dce384c9436
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# makefile (from `Makefile', line 8)
+POWERLINE = $(HOME)/.config/powerline
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.tEgxcHs42s/Listeners
+# automatic
+%F = $(notdir $%)
+# makefile (from `Makefile', line 4)
+PRJ := /Users/nmarks/Projects/erik/dotfiles
+# makefile (from `Makefile', line 7)
+BASHRCD = $(HOME)/bashrc.d
+# environment
+PWD = /Users/nmarks/Projects/erik/dotfiles
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+PYENV_SHELL = zsh
+# environment
+HOME = /Users/nmarks
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/nmarks/Library/Application Support/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
+# environment
+LOGNAME = nmarks
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+ZSH = /Users/nmarks/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from `Makefile', line 13)
+MKDIR = mkdir -p
+# environment
+XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+LC_TERMINAL = iTerm2
+# environment
+SHLVL = 3
+# environment
+AWS_PROFILE = imprivata-nmarks
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = nmarks
+# makefile (from `Makefile', line 1)
+.DEFAULT_GOAL := help
+# default
+MAKECMDGOALS := all
+# environment
+TERM_SESSION_ID = w0t4p0:6EE00746-E852-4394-B30C-73C1532BD70C
+# makefile (from `Makefile', line 15)
+LNF = ln -vsf
+# environment
+GITHUB_OAUTH_TOKEN = e3905e980c5bc77cdf04c9169112994cd678e969
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = iTerm.app
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/72/cmp8x83n3js_spr_3hvvdgch0000gn/T/
+# automatic
+*F = $(notdir $*)
+# makefile (from `Makefile', line 10)
+OS = $(shell uname -s)
+# environment
+VSCODE_IPC_HOOK = /Users/nmarks/Library/Application Support/Code/1.70.0-main.sock
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 3.4.16
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.250253242.250253248.AB4D584D-A2BA-4726-87DA-9EF3F6F7BBB7
+# environment
+LC_TERMINAL_VERSION = 3.4.16
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+ITERM_SESSION_ID = w0t4p0:6EE00746-E852-4394-B30C-73C1532BD70C
+# environment
+COLORFGBG = 15;0
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+ITERM_PROFILE = zsh
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+P9K_TTY = old
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# makefile (from `Makefile', line 14)
+LN = ln -vs
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+AUTOJUMP_ERROR_PATH = /Users/nmarks/Library/autojump/errors.log
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 49870
+# environment
+TFWRAP_FEED = https://tfwrap:zvkhdkl7itzcr5tm55uy2bse4dixbnnlzjq74w6fkjlojykf73fa@imprivata.pkgs.visualstudio.com/_packaging/tfwrap/pypi/simple/
+# variable set hash-table stats:
+# Load=99/1024=10%, Rehash=0, Collisions=10/128=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777220, inode 243608420): 18 files, no impossibilities.
+
+# 18 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+stayback:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 70):
+	$(MKDIR) $(HOME)/.stayback
+	$(HOME)/bin/decrypt $(PWD)/stayback.json.gpg
+	$(LN) $(PRJ)/stayback.json  $(HOME)/.stayback.json
+	
+
+ssh-config:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 103):
+	$(LN) $(PRJ)/ssh/config  $(HOME)/.ssh/config
+	
+
+all: packages gpg powerline bash gitconfig ssh-config
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/2=0%
+
+vim:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 75):
+	$(LN) $(PRJ)/vim/vimrc  $(HOME)/.vimrc
+	
+
+.PHONY: gitconfig vim powerline
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+gitconfig:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 61):
+	$(LN) $(PRJ)/gitconfig $(HOME)/.gitconfig
+	
+
+gpg: home
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 64):
+	curl --silent -o $(BIN)/encrypt https://raw.githubusercontent.com/natemarks/pipeline-scripts/main/scripts/encrypt
+	curl --silent -o $(BIN)/decrypt https://raw.githubusercontent.com/natemarks/pipeline-scripts/main/scripts/decrypt
+	chmod 755 $(BIN)/encrypt
+	chmod 755 $(BIN)/decrypt
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-07-02 05:47:25
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+remove-all: rm-bash rm-gpg rm-powerline rm-ssh-config rm-gitconfig
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+packages:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := packages
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/10=10%
+#  commands to execute (from `Makefile', line 82):
+	sudo apt-get install -y \
+	curl \
+	git \
+	tree \
+	make \
+	wget \
+	zip \
+	unzip \
+	seahorse-nautilus \
+	fzf \
+	ripgrep \
+	silversearcher-ag \
+	jq \
+	fonts-powerline \
+	dconf-cli \
+	uuid-runtime \
+	tmux \
+	shellcheck \
+	hunspell;
+	
+
+rm-ssh-config:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 118):
+	-rm -f $(HOME)/.ssh/config
+	
+
+help:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 19):
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+	
+
+home:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 22):
+	# manage all of my executables in $HOME/bin
+	$(MKDIR) $(HOME)/bin
+	# manage temporary/scratch files in $HOME/tmp
+	$(MKDIR) $(HOME)/tmp
+	# manage project files in $HOME/projects
+	$(MKDIR) $(HOME)/projects
+	
+
+powerline:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 30):
+	pip3 install --user powerline-status
+	pip3 install --user powerline-gitstatus
+	$(MKDIR) $(POWERLINE)/colorschemes
+	$(MKDIR) $(POWERLINE)/themes/shell
+	$(LN) $(PRJ)/powerline/colorschemes_default.json  $(POWERLINE)/colorschemes/default.json
+	$(LN) $(PRJ)/powerline/themes_shell_default.json  $(POWERLINE)/themes/shell/default.json
+	
+
+rm-powerline:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 114):
+	-rm -f $(POWERLINE)/colorschemes/default.json
+	-rm -f $(POWERLINE)/themes/shell/default.json
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+shellcheck:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 78):
+	find . -type f -name "*.sh" ! -name 'ohmyzsh_git_aliases.sh' -exec "shellcheck" "--format=gcc" {} \;
+	
+
+rm-gitconfig:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 121):
+	-rm -f $(HOME)/.gitconfig
+	
+
+bash:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 38):
+	$(MKDIR) $(BASHRCD)
+	# some desc
+	$(LN) $(PRJ)/bashrc.d/add_home_bin_to_path.sh  $(BASHRCD)/add_home_bin_to_path.sh
+	$(LN) $(PRJ)/bashrc.d/aliases.sh  $(BASHRCD)/aliases.sh
+	$(LN) $(PRJ)/bashrc.d/aws_functions.sh $(BASHRCD)/aws_functions.sh
+	$(LN) $(PRJ)/bashrc.d/bash_functions.sh $(BASHRCD)/bash_functions.sh
+	$(LN) $(PRJ)/bashrc.d/bash_powerline.sh $(BASHRCD)/bash_powerline.sh
+	$(LN) $(PRJ)/bashrc.d/editor.sh  $(BASHRCD)/editor.sh
+	$(LN) $(PRJ)/bashrc.d/fzf.sh  $(BASHRCD)/fzf.sh
+	$(LN) $(PRJ)/bashrc.d/git_aliases.sh $(BASHRCD)/git_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/git_functions.sh $(BASHRCD)/git_functions.sh
+	$(LN) $(PRJ)/bashrc.d/go.sh $(BASHRCD)/go.sh
+	$(LN) $(PRJ)/bashrc.d/ohmyzsh_git_aliases.sh  $(BASHRCD)/ohmyzsh_git_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/packer.sh $(BASHRCD)/packer.sh
+	$(LN) $(PRJ)/bashrc.d/ssh_aliases.sh $(BASHRCD)/ssh_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/temp_aliases.sh  $(BASHRCD)/temp_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/terragrunt_aliases.sh  $(BASHRCD)/terragrunt_aliases.sh
+	$(LN) $(PRJ)/bashrc.d/tmux_aliases.sh $(BASHRCD)/tmux_aliases.sh
+	sed -i.$(EPOCH) '/\.bashrc\.local/d' $(HOME)/.bashrc
+	echo '. $(HOME)/.bashrc.local' >> $(HOME)/.bashrc
+	$(LN) $(PRJ)/bashrc.local $(HOME)/.bashrc.local
+	
+
+rm-gpg:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 110):
+	-rm -f $(BIN)/encrypt
+	-rm -f $(BIN)/decrypt
+	
+
+rm-bash:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 106):
+	-rm -rf $(BASHRCD)
+	-rm -f $(HOME)/.bashrc.local
+	
+
+# files hash-table stats:
+# Load=22/1024=2%, Rehash=0, Collisions=0/51=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Thu Aug 11 13:17:09 2022
+
+ 
