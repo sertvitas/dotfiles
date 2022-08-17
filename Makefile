@@ -18,6 +18,9 @@ LNF = ln -vsf
 help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
+pyenv: ## install pyenv
+	 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
 nodejs: ## Install NodeJS
 	curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -;
 	sudo apt -y install nodejs
@@ -61,9 +64,11 @@ bash: ## configure bash environment
 	$(LN) $(PRJ)/bashrc.d/terragrunt_aliases.sh  $(BASHRCD)/terragrunt_aliases.sh
 	$(LN) $(PRJ)/bashrc.d/tmux_aliases.sh $(BASHRCD)/tmux_aliases.sh
 	$(LN) $(PRJ)/bashrc.d/docker.sh $(BASHRCD)/docker.sh
+	$(LN) $(PRJ)/bashrc.d/pyenv.sh $(BASHRCD)/pyenv.sh
 	sed -i.$(EPOCH) '/\.bashrc\.local/d' $(HOME)/.bashrc
 	echo '. $(HOME)/.bashrc.local' >> $(HOME)/.bashrc
 	$(LN) $(PRJ)/bashrc.local $(HOME)/.bashrc.local
+
 
 gitconfig: ## deploy user gitconfig
 	$(LN) $(PRJ)/gitconfig $(HOME)/.gitconfig
