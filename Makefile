@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 .DEFAULT_GOAL := help
 .PHONY: gitconfig vim powerline
 DEFAULT_BRANCH := main
