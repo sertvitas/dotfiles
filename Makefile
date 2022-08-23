@@ -130,6 +130,9 @@ packages: ## install required packages
 ssh-config: ## ssh config
 	$(LN) $(PRJ)/ssh/config  $(HOME)/.ssh/config
 
+vscode: ## install vscode
+	bash scripts/install_vscode.sh
+
 rm-bash: ## remove bashrc config before replacing
 	-rm -rf $(BASHRCD)
 	-rm -f $(HOME)/.bashrc.local
