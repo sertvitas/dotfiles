@@ -49,3 +49,8 @@ pathappemd() {
 function get_projects {
     echo ~/projects
     }
+
+function cdk_local() {
+  # prioritize ./node_modules/aws-cdk/bin/ in PATH
+  [ -d "./node_modules/aws-cdk/bin" ] && export PATH="./node_modules/aws-cdk/bin":$PATH
+}
