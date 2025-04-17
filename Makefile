@@ -23,7 +23,7 @@ pyenv: ## install pyenv
 	 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 nodejs: ## Install NodeJS
-	curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -;
+	curl -sL https://deb.nodesource.com/setup_22.x | sudo bash -;
 	sudo apt -y install nodejs
 
 aws_cdk: nodejs ## Install AWS CDK
